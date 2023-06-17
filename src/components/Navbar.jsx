@@ -44,6 +44,8 @@ const Navbar = () => {
           <NavLink to="/homepage">Home</NavLink>
           <NavLink to="/categories">Category</NavLink>
           <NavLink to="/products">Products</NavLink>
+          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/signup">SignUp</NavLink>
         </div>
 
         <span className="px-6">

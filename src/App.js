@@ -5,6 +5,9 @@ import Categories from "./pages/Categories";
 import Footer from "./components/Footer";
 import Cart from "./pages/Cart";
 import PageNotFound from "./pages/PageNotFound";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -28,14 +31,12 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
-        <Route
-          path="/homepage"
-          element={<Homepage />}
-          loader={productsData}
-        ></Route>
+        <Route index element={<Homepage />} loader={productsData}></Route>
         <Route path="/products" element={<Products />}></Route>
         <Route path="/categories" element={<Categories />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/signup" element={<Signup />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
       </Route>
     )
