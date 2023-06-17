@@ -57,6 +57,14 @@ const Signup = () => {
     } else {
       setEmailFormat("");
     }
+    if (clientName && email && password && mobile && address) {
+      console.log(clientName, email, password, mobile, address);
+      setClientName("");
+      setEmail("");
+      setPassword("");
+      setMobile("");
+      setAddress("");
+    }
   };
   return (
     <div className="w-full h-screen">
@@ -68,6 +76,7 @@ const Signup = () => {
             </h1>
             <input
               onChange={handleName}
+              value={clientName}
               type="text"
               placeholder="Name"
               className="border-none outline-none y-2 drop-shadow-lg w-full px-2 py-2 rounded-sm"
@@ -75,6 +84,7 @@ const Signup = () => {
             <br />
             <input
               onChange={handleEmail}
+              value={email}
               type="email"
               placeholder="email"
               className="border-none outline-none my-2 drop-shadow-lg w-full px-2 py-2 rounded-sm"
@@ -87,6 +97,7 @@ const Signup = () => {
             <br />
             <input
               onChange={handlePassword}
+              value={password}
               type="password"
               placeholder="Password"
               className="border-none outline-none my-2 drop-shadow-lg w-full px-2 py-2 rounded-sm"
@@ -99,6 +110,7 @@ const Signup = () => {
             <br />
             <input
               onChange={handleMobile}
+              value={mobile}
               type="text"
               placeholder="mobile"
               className="border-none outline-none my-2 drop-shadow-lg w-full px-2 py-2 rounded-sm"
@@ -106,6 +118,7 @@ const Signup = () => {
             <br />
             <input
               onChange={handleAddress}
+              value={address}
               type="text"
               placeholder="Address"
               className="border-none outline-none my-2 drop-shadow-md w-full px-2 py-2 rounded-sm"
